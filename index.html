@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+
     <style>
         body {
             background-color: grey;
-            background-image: url('img/ocean.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             margin: 0;
@@ -46,6 +47,26 @@
             text-align: center;
         }
 
+         #main-math{
+            background-color: white;
+            width: 450px;
+            height: 50px;
+            margin: auto;
+            padding-top: 25px;
+            text-align: flex;
+            font-size: 20px;
+        } 
+        .microphone{fill:blue}
+        .microphone { 
+            animation-name: microphone-turn;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+            transform-origin: 50% 50%;
+        }
+        @keyframes microphone-turn {
+            from {transform: rotate(0deg);}
+            to {transform:rotate(360deg) ;}
+        }
       </style>
 
 </head>
@@ -100,17 +121,125 @@
         <hr >
         <section id="main-text">
             <ul>
-                <li><audio controls autoplay> <source src="audio/Goida.m4a"></audio></li>
+                <li><audio controls> <source src="audio/Goida.m4a"></audio></li>
                 <li><video width="360" controls> <source src="vid/Video.mp4"> </video></li>
                 <li> ,<iframe width="360" src="https://www.youtube.com/embed/mxNBerF3vcE?control=1" allowfullscreen></iframe></li>
             </ul>
 
         </section>
+        <section id="main-math">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <semantics>
+                <mrow>
+                    <mrow>
+                        <mo>Γ</mo>
+                        <mo>(</mo>
+                        <mi>z</mi>
+                        <mo>)</mo>
+                        <mo >=</mo>
+                    </mrow>
+                    <mrow>
+                        <munderover> 
+                            <mo>∫</mo> 
+                            <mn>0</mn> 
+                            <mo>∞</mo> 
+                        </munderover> 
+                    </mrow>
+                    <mrow>
+                        <msup>
+                            <mi>t</mi>
+                            <mrow>
+                                <mi>z</mi>
+                                <mo>-</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <msup>
+                            <mi>e</mi>
+                            <mrow>
+                                <mo>-</mo>
+                                <mi>t</mi>
+                            </mrow>
+                        </msup>
+                        <mi>d</mi>
+                        <mi>t</mi>
+                        <mo>=</mo>
+                    </mrow>
+                    <mrow>
+                        <mfrac>
+                            <mrow>
+                                <msup>
+                                    <mi>e</mi>
+                                    <mrow>
+                                        <mo>-</mo>
+                                        <mi>y</mi>
+                                        <mi>z</mi>
+                                    </mrow>
+                                </msup>
+                            </mrow>
+                            <mrow>
+                                <mi>z</mi>
+                            </mrow>
+                        </mfrac>
+                        <mrow>
+                            <munderover> 
+                                <mo form="infix" >∏</mo>
+                                <mrow>
+                                    <mi>k</mi>
+                                    <mo>=</mo>
+                                    <mn>1</mn>
+                                </mrow> 
+                                <mrow>
+                                    <mo>∞</mo>
+                                </mrow>
+                            </munderover>
+                        </mrow>
+                    </mrow>
+                    <mrow>
+                        <msup>
+                            <mrow>
+                                    <mo>(</mo>
+                                    <mn>1</mn>
+                                    <mo>+</mo>
+                                <mfrac>
+                                    <mo>z</mo>
+                                    <mo>k</mo>
+                                </mfrac>
+                                    <mo>)</mo>
+                                   
+                            </mrow>  
+                            <mrow>
+                                <mo>-</mo>
+                                <mn>1</mn>
+                            </mrow>  
+                        </msup>
+                    </mrow>
+                    <mrow>
+                        <msup>
+                            <mi>e</mi>
+                            <mrow>
+                                <mi>z</mi>
+                                <mo>/</mo>
+                                <mi>k</mi>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                </mrow>
+            </semantics> 
+            </math>
+        </section>
+    
     </main>
     <footer>
         <p>
              Pavlo Hruznov Inc.
         </p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 135 219" fill="none">
+            <path class="microphone" d="M116.5 76.5C116.5 96.8247 110.785 115.03 101.778 128.031C92.7583 141.05 80.7429 148.5 68 148.5C55.2571 148.5 43.2417 141.05 34.2223 128.031C25.215 115.03 19.5 96.8247 19.5 76.5C19.5 56.1753 25.215 37.9702 34.2223 24.969C43.2417 11.9505 55.2571 4.5 68 4.5C80.7429 4.5 92.7583 11.9505 101.778 24.969C110.785 37.9702 116.5 56.1753 116.5 76.5Z" stroke="black" stroke-width="9"/>
+            <path class="microphone" d="M5 77L130 77" stroke="black" stroke-width="9" stroke-linecap="round"/>
+            <path class="microphone" d="M68 153V214" stroke="black" stroke-width="9" stroke-linecap="round"/>
+            <path class="microphone" d="M37 214H99" stroke="black" stroke-width="9" stroke-linecap="round"/>
+          </svg>
     </footer>
     </body>
 </html>
