@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-
+    <script src="images.js"></script>
     <style>
         body {
             background-color: grey;
@@ -100,7 +100,11 @@
                 <br>
                 "My group is called EIRfuc-22. We're learning the C++ programming language."
             </p>
-            <img src="img/me.JPG" alt="My photo" width="150" title="My photo" />
+            <img id="photo" src="img/me.JPG" alt="My photo" width="150" title="My photo" onclick="changeImgLoop()" />
+            <h2> More of my photos</h2>
+            
+              <button onclick="Forward()">Previous</button>
+              <button onclick="Backward()">Next</button>
             <h2>Soft Skills</h2>
             <ul>
                 <li>time management</li>
